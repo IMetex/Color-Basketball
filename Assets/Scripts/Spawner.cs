@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-    private Vector3 SpawnPos;
+  private Vector3 SpawnPos;
     public GameObject spawnObject;
     private float newSpawnDuration = 1f;
 
     #region Singleton
 
-    public static SpawnManager Instance;
+    public static Spawner Instance;
 
     private void Awake()
     {
@@ -34,4 +34,3 @@ public class SpawnManager : MonoBehaviour
         Invoke("SpawnNewObject", newSpawnDuration);
     }    
 }
-
